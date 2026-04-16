@@ -4,10 +4,11 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 public class ForgotPasswordRequest {
-    private String email;
 
     @NotBlank(message = "Email is required")
     @Email(message = "Must be a valid email format")
+    private String email;
+
     public String getEmail() {
         return email;
     }
